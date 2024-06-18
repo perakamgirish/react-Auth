@@ -37,11 +37,13 @@ const Dashboard = () => {
         >
           Logout
         </Button>
+
         <Link to="/protected-content1">
           <Button type="default" className="profile-btn">
             Go to Protected Content 1
           </Button>
         </Link>
+        
         <Link to="/protected-content2">
           <Button type="default" className="profile-btn">
             Go to Protected Content 2

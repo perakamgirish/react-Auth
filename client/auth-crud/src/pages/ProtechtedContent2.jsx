@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import useProtectedContent from "../hooks/UseProtechted";
+import { Button, Card } from "antd";
+import { Link } from "react-router-dom";
 
 const ProtectedContent2 = () => {
   const { content, error, loading, fetchContent } = useProtectedContent();
@@ -10,9 +12,17 @@ const ProtectedContent2 = () => {
 
   return (
     <div>
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {content && <p>{content}</p>}
+      <Card className="profile-card">
+        {loading && <p>Loading...</p>}
+        {error && <p>{error}</p>}
+        {content && <p>{content}</p>}
+
+        <Link to="/Dashboard">
+          <Button type="primary" className="profile-btn">
+            Dashboard
+          </Button>
+        </Link>
+      </Card>
     </div>
   );
 };
